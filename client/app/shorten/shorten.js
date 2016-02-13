@@ -17,6 +17,7 @@ angular.module('shortly.shorten', [])
       data: JSON.stringify($scope.link)
     }).then(function(){
       $scope.message = "Link shortened";
+      $scope.linkForm.$setPristine();
     }).catch(function(){
       $scope.message = "We encountered an error!"
     }).finally(function() {

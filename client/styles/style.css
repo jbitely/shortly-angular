@@ -143,6 +143,7 @@ input[type=url]:focus {
 
 .creator .message {
   clear: both;
+  margin: 20px;
 }
 
 .logout {
@@ -153,3 +154,4 @@ input[type=url]:focus {
 .ng-cloak {
   opacity: 0;
 }
+
