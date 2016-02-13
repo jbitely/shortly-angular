@@ -30,4 +30,10 @@ angular.module('shortly.auth', [])
         console.error(error);
       });
   };
+
+  $scope.signout = function () {
+    $window.localStorage.setItem('com.shortly', '');
+    $location.path('/signin');
+  }
+
 });

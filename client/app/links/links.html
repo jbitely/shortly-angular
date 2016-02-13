@@ -1,5 +1,6 @@
 <div id='container'>
-  <div class="link" ng-repeat="link in data.links">
+  <div class="link" ng-repeat="link in data.links | orderBy:'link.visits'">
+    <a ng-href="{{link.base_url + '/' + link.code}}">
     <img src="assets/redirect_icon.png" />
     <div class="info">
       <div class="visits"><span class="count">{{link.visits}}</span>Visits</div>
@@ -7,5 +8,6 @@
       <div class="original">{{link.url}}</div>
       <div>{{link.base_url + "/" + link.code}}</div>
     </div>
+    </a>
   </div>
 </div>
