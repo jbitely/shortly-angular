@@ -1,7 +1,12 @@
 <div id='container'>
 <!-- Your code here -->
-  <input ng-model="link.url" />
-  <button ng-click="addLink()">Shorten</button>
+  <div class="creator">
+    <form>
+      <input ng-model="link.url" type="url"/>
+      <button ng-click="addLink()">Add</button>
+    </form>
+    <img class="spinner" src="assets/spiffygif_46x46.gif">
+  </div>
 </div>
 
 
