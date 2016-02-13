@@ -1,5 +1,6 @@
 <div id='container'>
-  <div class="link" ng-repeat="link in data.links | orderBy:'link.visits'">
+  <input type="text" ng-model="search" placeholder="filter links">
+  <div class="link" ng-repeat="link in data.links | orderBy:'link.visits' |filter:search">
     <a ng-href="{{link.base_url + '/' + link.code}}">
     <img src="assets/redirect_icon.png" />
     <div class="info">
