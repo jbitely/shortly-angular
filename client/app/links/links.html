@@ -1,5 +1,11 @@
 <div id='container'>
-  <ul>
-    <li ng-repeat="link in data.links">{{ link.url }}</li>
-  </ul>
+  <div class="link" ng-repeat="link in data.links">
+    <img src="assets/redirect_icon.png" />
+    <div class="info">
+      <div class="visits"><span class="count">{{link.visits}}</span>Visits</div>
+      <div class="title">{{link.title}}</div>
+      <div class="original">{{link.url}}</div>
+      <div>{{link.base_url + "/" + link.code}}</div>
+    </div>
+  </div>
 </div>
