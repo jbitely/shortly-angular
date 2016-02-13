@@ -4,6 +4,9 @@
 angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
+
+  angular.extend($scope, Auth);
+
   $scope.user = {};
 
   $scope.signin = function () {

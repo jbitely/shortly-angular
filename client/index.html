@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Shortly</h1>
-      <div class = "navigation">
+      <div ng-controller="AuthController" ng-show="isAuth()" class = "navigation">
         <ul>
           <li><a href="#/links">Links</a></li>
           <li><a href="#/shorten">Shorten</a></li>
