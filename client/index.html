@@ -5,21 +5,20 @@
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
-  <body>
+  <body class="ng-cloak">
     <h1>Shortly</h1>
       <div ng-controller="AuthController" ng-show="isAuth()" class = "navigation">
         <ul>
-          <li><a href="#/links">Links</a></li>
-          <li><a href="#/shorten">Shorten</a></li>
+          <li><a ui-sref="links">Links</a></li>
+          <li><a ui-sref="shorten">Shorten</a></li>
           <li class="logout"><a href="" ng-click="signout()">Logout</a></li>
         </ul>
       </div>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <div ui-view></div>
 
     <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
     <script src="app/shorten/shorten.js"></script>
