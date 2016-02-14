@@ -24,7 +24,7 @@ gulp.task('start', ['serve'],function () {
   bs({
     notify: true,
     // address for server,
-    injectChanges: true,
+    injectChanges: false,
     files: paths.scripts.concat(paths.html, paths.styles),
     proxy: 'localhost:8000'
   });
